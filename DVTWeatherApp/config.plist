@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>services</key>
+    <dict>
+        <key>user-profile</key>
+        <string>profile</string>
+    </dict>
+    <key>messages</key>
+    <dict>
+        <key>service-error</key>
+        <string>service not found</string>
+        <key>conn-error</key>
+        <string>Connection error</string>
+        <key>app-update</key>
+        <string>Update available</string>
+        <key>trans-success</key>
+        <string>Success</string>
+    </dict>
+    <key>client</key>
+    <dict>
+        <key>code</key>
+        <string></string>
+        <key>swiftCode</key>
+        <string></string>
+        <key>sortCode</key>
+        <string></string>
+        <key>name</key>
+        <string>Weather app</string>
+    </dict>
+    <key>environments</key>
+    <array>
+        <dict>
+            <key>base-path</key>
+            <string>https://ikonnectwrapper.creditbank.co.ke:4000</string>
+            <key>end-point</key>
+            <string>/ikonnect/soft-token/request</string>
+            <key>app-timeout</key>
+            <integer>4</integer>
+            <key>active</key>
+            <true/>
+            <key>early-build</key>
+            <true/>
+            <key>name</key>
+            <string>Development</string>
+        </dict>
+    </array>
+</dict>
+</plist>

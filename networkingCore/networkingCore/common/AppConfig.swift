@@ -106,29 +106,35 @@ public struct AppEnvironment:Decodable {
     public var active:Bool
     public var earlyRelease:Bool
     public var appTimeout:Double
-    //
+    public var units:String
+    public var appID:String
     public var rootURL:String
-    public var endPoint:String
+    public var currentWeatherEndpoint:String
+    public var weatherForecastEndPoint:String
     //
     public var IsDevt :Bool {
         get{
             return name.lowercased() == "development"
         }
     }
-    // Mark: Computed value
+
     public var IsEarlyTest:Bool{
         get{
             return !IsDevt && earlyRelease
         }
     }
     
+ 
     enum CodingKeys:String,CodingKey{
         case name
         case active
         case earlyRelease = "early-build"
         case rootURL = "base-path"
         case appTimeout = "app-timeout"
-        case endPoint = "end-point"
+        case currentWeatherEndpoint = "current-weather-end-point"
+        case units
+        case appID = "openweatherKey"
+        case weatherForecastEndPoint = "weather-forecast-end-point"
      }
 }
 

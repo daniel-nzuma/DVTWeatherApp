@@ -40,7 +40,6 @@ public class DefaultApiRequest : NSObject, Codable {
         try? container.encode(imei , forKey: .imei)
         try? container.encode(service , forKey: .service)
         try? container.encode(origin , forKey: .origin)
-        //try? container.encode(origin , forKey: .origin)
         try? container.encode(lang , forKey: .lang)
     }
 }

@@ -9,7 +9,9 @@ import Foundation
 
 public protocol APIServiceProtocol:AnyObject {
     //
-    func findUser(phone:String,email:String, _ completion: @escaping (_ status:Int,_ firstLogin:Bool?,_ otp:String?,_ enforceOtp:Bool?,_ msg:String?) -> Swift.Void) -> Swift.Void
+    func getCurrentWeather(mGetCurrenWeatherReq:GetWeatherRequest, _ completion: @escaping (_ status:Int,_ current:String?,_ min:String?,_ max:String?,_ msg:String?) -> Swift.Void) -> Swift.Void
+    
+    func getWeatherForecast(mGetCurrenWeatherReq:GetWeatherRequest, _ completion: @escaping (_ status:Int,_ data:[WeatherForecastItem]?,_ msg:String?) -> Swift.Void) -> Swift.Void
     
     
 }

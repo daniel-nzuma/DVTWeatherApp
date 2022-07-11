@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  DVTWeatherApp
+
+  Created by Daniel Nzuma on 10/07/2022.
+  
+*/
+
+"sunny" = "SUNNY";
+"min" = "min";
+"max" = "max";
+"current" = "current";
+

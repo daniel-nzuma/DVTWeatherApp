@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D38DE317287B868700394FAE /* WeatherForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DE316287B868700394FAE /* WeatherForecastResponse.swift */; };
 		D3912843287A1DD500AA43C3 /* networkingCore.docc in Sources */ = {isa = PBXBuildFile; fileRef = D3912842287A1DD500AA43C3 /* networkingCore.docc */; };
 		D3912849287A1DD500AA43C3 /* networkingCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D391283E287A1DD500AA43C3 /* networkingCore.framework */; };
 		D391284E287A1DD500AA43C3 /* networkingCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391284D287A1DD500AA43C3 /* networkingCoreTests.swift */; };
 		D391284F287A1DD500AA43C3 /* networkingCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D3912841287A1DD500AA43C3 /* networkingCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3912860287A215000AA43C3 /* APIServiceProtoco.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391285F287A215000AA43C3 /* APIServiceProtoco.swift */; };
 		D3912862287A217200AA43C3 /* ApiDefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912861287A217200AA43C3 /* ApiDefaultResponse.swift */; };
-		D3912864287A218800AA43C3 /* PhoneLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912863287A218800AA43C3 /* PhoneLookupResponse.swift */; };
+		D3912864287A218800AA43C3 /* GetCurrentWeatherResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912863287A218800AA43C3 /* GetCurrentWeatherResp.swift */; };
 		D3912866287A21AE00AA43C3 /* DefaultApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912865287A21AE00AA43C3 /* DefaultApiRequest.swift */; };
-		D3912868287A21C900AA43C3 /* PhoneLookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912867287A21C900AA43C3 /* PhoneLookupRequest.swift */; };
+		D3912868287A21C900AA43C3 /* GetWeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912867287A21C900AA43C3 /* GetWeatherRequest.swift */; };
 		D391286A287A220100AA43C3 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912869287A220100AA43C3 /* AppConfig.swift */; };
 		D391286C287A221900AA43C3 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391286B287A221900AA43C3 /* AppUtils.swift */; };
 		D391286E287A222F00AA43C3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391286D287A222F00AA43C3 /* Utils.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D38DE316287B868700394FAE /* WeatherForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastResponse.swift; sourceTree = "<group>"; };
 		D391283E287A1DD500AA43C3 /* networkingCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = networkingCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3912841287A1DD500AA43C3 /* networkingCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = networkingCore.h; sourceTree = "<group>"; };
 		D3912842287A1DD500AA43C3 /* networkingCore.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = networkingCore.docc; sourceTree = "<group>"; };
@@ -43,9 +45,9 @@
 		D391284D287A1DD500AA43C3 /* networkingCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingCoreTests.swift; sourceTree = "<group>"; };
 		D391285F287A215000AA43C3 /* APIServiceProtoco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtoco.swift; sourceTree = "<group>"; };
 		D3912861287A217200AA43C3 /* ApiDefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDefaultResponse.swift; sourceTree = "<group>"; };
-		D3912863287A218800AA43C3 /* PhoneLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLookupResponse.swift; sourceTree = "<group>"; };
+		D3912863287A218800AA43C3 /* GetCurrentWeatherResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentWeatherResp.swift; sourceTree = "<group>"; };
 		D3912865287A21AE00AA43C3 /* DefaultApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiRequest.swift; sourceTree = "<group>"; };
-		D3912867287A21C900AA43C3 /* PhoneLookupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLookupRequest.swift; sourceTree = "<group>"; };
+		D3912867287A21C900AA43C3 /* GetWeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWeatherRequest.swift; sourceTree = "<group>"; };
 		D3912869287A220100AA43C3 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		D391286B287A221900AA43C3 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		D391286D287A222F00AA43C3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D3912865287A21AE00AA43C3 /* DefaultApiRequest.swift */,
-				D3912867287A21C900AA43C3 /* PhoneLookupRequest.swift */,
+				D3912867287A21C900AA43C3 /* GetWeatherRequest.swift */,
 			);
 			path = request;
 			sourceTree = "<group>";
@@ -140,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				D3912861287A217200AA43C3 /* ApiDefaultResponse.swift */,
-				D3912863287A218800AA43C3 /* PhoneLookupResponse.swift */,
+				D3912863287A218800AA43C3 /* GetCurrentWeatherResp.swift */,
+				D38DE316287B868700394FAE /* WeatherForecastResponse.swift */,
 			);
 			path = response;
 			sourceTree = "<group>";
@@ -266,12 +269,13 @@
 				D3912843287A1DD500AA43C3 /* networkingCore.docc in Sources */,
 				D391286E287A222F00AA43C3 /* Utils.swift in Sources */,
 				D3912874287A228700AA43C3 /* RequestManager.swift in Sources */,
+				D38DE317287B868700394FAE /* WeatherForecastResponse.swift in Sources */,
 				D3912860287A215000AA43C3 /* APIServiceProtoco.swift in Sources */,
 				D391286C287A221900AA43C3 /* AppUtils.swift in Sources */,
 				D391286A287A220100AA43C3 /* AppConfig.swift in Sources */,
-				D3912864287A218800AA43C3 /* PhoneLookupResponse.swift in Sources */,
+				D3912864287A218800AA43C3 /* GetCurrentWeatherResp.swift in Sources */,
 				D3912872287A227300AA43C3 /* JsonAny.swift in Sources */,
-				D3912868287A21C900AA43C3 /* PhoneLookupRequest.swift in Sources */,
+				D3912868287A21C900AA43C3 /* GetWeatherRequest.swift in Sources */,
 				D3912870287A225100AA43C3 /* APIServiceProtocol.swift in Sources */,
 				D3912876287A22A300AA43C3 /* RequestProtocol.swift in Sources */,
 				D3912866287A21AE00AA43C3 /* DefaultApiRequest.swift in Sources */,

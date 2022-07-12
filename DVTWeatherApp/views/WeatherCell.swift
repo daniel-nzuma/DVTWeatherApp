@@ -40,11 +40,29 @@ class WeatherCell: UITableViewCell {
     var mWeatherForecastItem : WeatherForecastItem? {
      didSet {
          dayOfWeekLbl.text = getDayOfWeek((mWeatherForecastItem?.timestmp!)!)
-         tempIconImView.text = mWeatherForecastItem?.mainWeather?.currentTemperature?.description
+         tempIconImView.image = imageByWeatherType((mWeatherForecastItem?.mWeatherDesc?[0].weatherName)!)
          temperatureLabl.text = mWeatherForecastItem?.mainWeather?.currentTemperature?.description
      }
      }
      
+    private func imageByWeatherType(_ mWeatherName:String) -> UIImage
+    {
+        var image = "clear.png"
+        if(mWeatherName.lowercased().contains("rain"))
+        {
+            image = "rainy.png"
+        }
+        else if(mWeatherName.lowercased().contains("sun"))
+        {
+            image = "sunny.png"
+        }
+        else if(mWeatherName.lowercased().contains("clear"))
+        {
+            image = "clear.png"
+        }
+        
+        return UIImage(named: image)!
+    }
     
     let dayOfWeekLbl: UILabel = {
         let lbl = UILabel()
@@ -56,14 +74,11 @@ class WeatherCell: UITableViewCell {
         return lbl
     }()
     
-    let tempIconImView: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = UIFont.boldSystemFont(ofSize: 14.0)
-        lbl.numberOfLines = 1
-        lbl.textColor = .white
- 
-        return lbl
+    let tempIconImView: UIImageView = {
+        var im = UIImageView()
+        im  = UIImageView(frame:CGRect(x:10, y:50, width:25, height:25));
+
+        return im
     }()
     
     
@@ -99,7 +114,7 @@ class WeatherCell: UITableViewCell {
             UIView(),
             UIView(),
             UIView(),
-
+            UIView(),
             UIView(),
             tempIconImView,
             UIView(),

@@ -11,13 +11,13 @@ import Foundation
 class GetCurrentWeatherResp:NSObject,Codable{
     
     public var mWeatherItem:WeatherItemResp?
-    public var name:String? = ""
+    public var city:String? = ""
     public var mCurrentWeatherList:[CurrentWeather]?
 
     
     private enum CodingKeys: String, CodingKey {
         case mWeatherItem = "main"
-        case name
+        case city = "name"
         case mCurrentWeatherList = "weather"
 
     }
@@ -26,7 +26,7 @@ class GetCurrentWeatherResp:NSObject,Codable{
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         mWeatherItem = try? container.decodeIfPresent(WeatherItemResp.self, forKey: .mWeatherItem)
-        name = try? container.decodeIfPresent(String.self, forKey: .name)
+        city = try? container.decodeIfPresent(String.self, forKey: .city)
         mCurrentWeatherList = try? container.decodeIfPresent([CurrentWeather].self, forKey: .mCurrentWeatherList)
 
     }
@@ -34,12 +34,14 @@ class GetCurrentWeatherResp:NSObject,Codable{
     public  func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try? container.encode(mWeatherItem , forKey: .mWeatherItem)
-        try? container.encode(name , forKey: .name)
+        try? container.encode(city , forKey: .city)
         try? container.encode(mCurrentWeatherList , forKey: .mCurrentWeatherList)
 
     }
      
 }
+
+ 
 
 public class CurrentWeather:NSObject,Codable
 {

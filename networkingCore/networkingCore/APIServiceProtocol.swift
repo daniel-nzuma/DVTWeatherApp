@@ -8,9 +8,11 @@
 import Foundation
 
 extension RequestManager:APIServiceProtocol {
+     
     
+     
    
-    public func getCurrentWeather(mGetCurrenWeatherReq: GetWeatherRequest, _ completion: @escaping (Int,String?,String?,String?,String?) -> Void)
+    public func getCurrentWeather(mGetCurrenWeatherReq: GetWeatherRequest, _ completion: @escaping (Int, String?, String?, String?, String?, String) -> Void)
     {
         
         guard
@@ -20,7 +22,7 @@ extension RequestManager:APIServiceProtocol {
             let appID = config?.Environment?.appID,
             let fullURL = URL(string: "\(rootURL)\(currntWeatherEndpoint)")
         else {
-            completion(0,nil,nil,nil,"Invalid Service Config.")
+            completion(0,nil,nil,nil,"Invalid Service Config.","")
             return
         }
 
@@ -44,7 +46,7 @@ extension RequestManager:APIServiceProtocol {
                let urlComponents = getCurrentWeatherURLComponent,
                let requestURL = urlComponents.url?.absoluteURL
           else {
-              completion(0,nil,nil,nil,"Invalid Service Config.")
+              completion(0,nil,nil,nil,"Invalid Service Config.","")
               return
           }
          
@@ -56,7 +58,7 @@ extension RequestManager:APIServiceProtocol {
             //
             guard let responseString = r else {
                 // check for fundamental networking error
-                completion(0,nil,nil,nil,msg ?? config.messages.connectionError)
+                completion(0,nil,nil,nil,msg ?? config.messages.connectionError,"")
                 return
             }
             //
@@ -65,12 +67,12 @@ extension RequestManager:APIServiceProtocol {
             //Decode
             guard let rdata = responseString.data(using: .utf8),let resp = try? decoder.decode(GetCurrentWeatherResp.self, from: rdata) else {
                 //
-                completion(1,nil,nil,nil,msg ?? config.messages.connectionError)
+                completion(1,nil,nil,nil,msg ?? config.messages.connectionError,"")
                 return
             }
             
             
-            completion(1,resp.mWeatherItem?.currentTemperature?.description,resp.mWeatherItem?.minimumTemperature?.description,resp.mWeatherItem?.maxTemperature?.description,resp.mCurrentWeatherList?[0].name)
+            completion(1,resp.mWeatherItem?.currentTemperature?.description,resp.mWeatherItem?.minimumTemperature?.description,resp.mWeatherItem?.maxTemperature?.description,resp.mCurrentWeatherList?[0].name,resp.city!)
  
         }
         //

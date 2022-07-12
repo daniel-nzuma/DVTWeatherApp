@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import CoreData
 
-public struct FavouriteWeatherItem {
+public class FavouriteWeatherItem {
     
     var country: String?
     var city: String?

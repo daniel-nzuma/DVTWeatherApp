@@ -311,7 +311,11 @@ class CurrentWeatherVC: UIViewController, CLLocationManagerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.sectionHeaderTopPadding = 3
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 3
+        } else {
+            // Fallback on earlier versions
+        }
         
         tableView.register(WeatherCell.self, forCellReuseIdentifier: "Cell")
         

@@ -63,7 +63,11 @@ class FavouritesListVC :UITableViewController, NSFetchedResultsControllerDelegat
         favListtableView.delegate = self
         favListtableView.dataSource = self
          favListtableView.rowHeight = UITableView.automaticDimension
-        favListtableView.sectionHeaderTopPadding = 3
+        if #available(iOS 15.0, *) {
+            favListtableView.sectionHeaderTopPadding = 3
+        } else {
+            // Fallback on earlier versions
+        }
         favListtableView.separatorColor = .brown
         favListtableView.separatorStyle = .singleLine
         
